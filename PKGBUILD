@@ -2,7 +2,7 @@
 
 pkgname=php-fpm-s6serv
 pkgver=0.2
-pkgrel=2
+pkgrel=3
 pkgdesc="php-fpm service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -24,7 +24,7 @@ package() {
 	
 	#log
 	install -Dm 0755 "$srcdir/php-fpm.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/php-fpm/log/run"
-	install -Dm 0644 "$srcdir/php-fpm.logd" "$pkgdir/etc/s6-serv/log.d/serv/php-fpm"
+	install -Dm 0644 "$srcdir/php-fpm.logd" "$pkgdir/etc/s6-serv/log.d/php-fpm"
 	
 	install -Dm 0644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/php-fpm-s6serv/LICENSE"
 }
